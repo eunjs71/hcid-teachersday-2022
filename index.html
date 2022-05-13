@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.6/jquery.fullpage.css"
+      integrity="sha512-XTju7+OcUI0zv/kHcAViCT4g5s06E11uNyeUAszMXza7pr4a7TDx0ureInLtIV4TqYnSxG83ep/JHB82qHi7Cg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link href="global.css" rel="stylesheet" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.6/vendors/scrolloverflow.js"
+      integrity="sha512-y6u4j91RAmORbwEpMfdFFl3ZD33yr5rHp8uudO0907uzMboTooDu3/qO2iVqhKyLLOzoPNw+90lHHnhZpWChMg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.6/jquery.fullpage.js"
+      integrity="sha512-g21Xn60jpWOHiCGSFbBMvwlxHa5GAKxequoBo/7Gjn2Pbe87WytUkZLPBtyCMwOIbZ+4To1/5PrPZNvfatWXqA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/addons/p5.sound.min.js"></script>
+
+    <!-- <sciprt src="soundBox.js"></sciprt> -->
+
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="fullpage">
+      <div id="fp_page1" class="section" data-anchor="page1">
+        <div class="menu">
+          <div class="menu__title">
+            <img src="image/teachers_logo.png" class="menu__title__img" />
+          </div>
+          <div class="menu__start">시작하기</div>
+          <div id="soundBox"></div>
+        </div>
+      </div>
+      <div id="fp_page2" class="section" data-anchor="page2">
+        <div class="characterSelect">
+          <div class="characterSelect__question">당신은 누구십니까?</div>
+          <div class="characterSelect__characters">
+            <div id="selectJH" class="characterSelect__characters__character">
+              <div class="characterSelect__characters__character__image">
+                <img src="image/char1jh.png" alt="" id="charJoonhwan" />
+              </div>
+              <div class="characterSelect__characters__character__name">
+                이준환
+              </div>
+            </div>
+            <div id="selectHJ" class="characterSelect__characters__character">
+              <div class="characterSelect__characters__character__image">
+                <img src="image/char2hj.png" alt="" id="imgHajin" />
+              </div>
+              <div class="characterSelect__characters__character__name">
+                임하진
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="fp_page3" class="section" data-anchor="page3">
+        <div class="ngradex">
+          <div class="ngradex__page">
+            <div class="ngradex__page__leftscreen">
+              <div class="ngradex__page__leftscreen__info">
+                <!-- <div class="ngradex__page__leftscreen__info__placeholder">
+                  포켓몬을 선택해주세요!
+                </div> -->
+                <!-- <div class="ngradex__page__leftscreen__info__img">
+                  <img
+                    src="image/149s.png"
+                    alt=""
+                    class="ngradex__page__leftscreen__info__img"
+                  />
+                </div>
+                <div class="ngradex__page__leftscreen__info__text">
+                  Lv. 1 이름
+                </div> -->
+              </div>
+            </div>
+          </div>
+          <div class="ngradex__page">
+            <div class="ngradex__page__rightbox">
+              <div class="ngradex__page__rightbox__rscreen">
+                <div class="ngradex__page__rightbox__rscreen__title"></div>
+                <div class="ngradex__page__rightbox__rscreen__list">
+                  <!-- <div class="ngradex__page__rightbox__rscreen__list__msg">
+                    How to pass arguments to addEventListener listener
+                    function?https://stackoverflow.com › questions ›
+                    how-to-pass-ar... 2008. 11. 2. — How to pass arguments to
+                    addEventListener listener function? ... var someVar =
+                    some_other_function(); someObj.addEventListener("click",
+                    function(){ ... 답변 33개 · 인기 답변: Why not just get the
+                    arguments from the target attribute of the event? Example:
+                    const someInput ... How to pass parameter to function using
+                    in addEventListener? 2012년 8월 19일 How to pass arguments
+                    to addEventListener listener function ... 2020년 8월 17일
+                    javascript - How to pass some parameters to function called
+                    in ... 2012년 11월 26일 javascript addEventListener function
+                    parameters - Stack ... 2017년 5월 24일 stackoverflow.com
+                    검색결과 더보기
+                  </div> -->
+                  <!-- <div class="ngradex__page__rightbox__rscreen__list__item">
+                    <div
+                      class="ngradex__page__rightbox__rscreen__list__item__icon"
+                    >
+                      <img
+                        src="image/149s.png"
+                        alt=""
+                        class="ngradex__page__rightbox__rscreen__list__item__icon__img"
+                      />
+                    </div>
+                    <div
+                      class="ngradex__page__rightbox__rscreen__list__item__name"
+                    >
+                      이름 <span class="master">(석)</span>
+                    </div>
+                    <div
+                      class="ngradex__page__rightbox__rscreen__list__item__level"
+                    >
+                      Lv. 1
+                    </div>
+                    <div
+                      class="ngradex__page__rightbox__rscreen__list__item__dept"
+                    >
+                      언론정보학과
+                    </div>
+                  </div> -->
+                </div>
+              </div>
+              <div class="ngradex__page__rightbox__bbton">
+                &lt; 2022 스승의 날 &gt;
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- <div class="gradex">
+          <div class="gradex__screen"></div>
+          <div class="gradex__list">
+            <div class="gradex__list__title">hci+d Students</div>
+            <div class="gradex__list__title__items">
+              <div class="gradex__list__title__items__item">
+                <div class="gradex__list__title__items__item__icon">
+                  <img
+                    src="image/149s.png"
+                    alt=""
+                    class="gradex__list__title__items__item__icon__image"
+                  />
+                </div>
+                <div class="gradex__list__title__items__item__text">
+                  <div class="gradex__list__title__items__item__text__name">
+                    이름 <span class="master">(석)</span>
+                  </div>
+                  <div class="gradex__list__title__items__item__text__level">
+                    Lv.1
+                  </div>
+                  <div class="gradex__list__title__items__item__text__dept">
+                    언론정보학과
+                  </div>
+                </div>
+                <div class="gradex__list__title__items__item__letter">
+                  <img
+                    src="image/envelope-solid.svg"
+                    class="gradex__list__title__items__item__letter__img"
+                  />
+                </div>
+              </div>
+              <div class="gradex__list__title__items__item">
+                <div class="gradex__list__title__items__item__icon">
+                  <img
+                    src="image/149s.png"
+                    alt=""
+                    class="gradex__list__title__items__item__icon__image"
+                  />
+                </div>
+                <div class="gradex__list__title__items__item__text">
+                  <div class="gradex__list__title__items__item__text__name">
+                    이름 <span class="doctor">(박)</span>
+                  </div>
+                  <div class="gradex__list__title__items__item__text__level">
+                    Lv.1
+                  </div>
+                  <div class="gradex__list__title__items__item__text__dept">
+                    언론정보학과
+                  </div>
+                </div>
+                <div class="gradex__list__title__items__item__letter">
+                  <img
+                    src="image/envelope-solid.svg"
+                    class="gradex__list__title__items__item__letter__img"
+                  />
+                </div>
+              </div>
+              <div class="gradex__list__title__items__item">
+                <div class="gradex__list__title__items__item__icon">
+                  <img
+                    src="image/149s.png"
+                    alt=""
+                    class="gradex__list__title__items__item__icon__image"
+                  />
+                </div>
+                <div class="gradex__list__title__items__item__text">
+                  <div class="gradex__list__title__items__item__text__name">
+                    이름 <span class="alumni">(졸)</span>
+                  </div>
+                  <div class="gradex__list__title__items__item__text__level">
+                    Lv.1
+                  </div>
+                  <div class="gradex__list__title__items__item__text__dept">
+                    언론정보학과
+                  </div>
+                </div>
+                <div class="gradex__list__title__items__item__letter">
+                  <img
+                    src="image/envelope-solid.svg"
+                    class="gradex__list__title__items__item__letter__img"
+                  />
+                </div>
+              </div>
+              <div class="gradex__list__title__items__item">
+                <div class="gradex__list__title__items__item__icon">
+                  <img
+                    src="image/149s.png"
+                    alt=""
+                    class="gradex__list__title__items__item__icon__image"
+                  />
+                </div>
+                <div class="gradex__list__title__items__item__text">
+                  <div class="gradex__list__title__items__item__text__name">
+                    이름 <span class="undergraduate">(학)</span>
+                  </div>
+                  <div class="gradex__list__title__items__item__text__level">
+                    Lv.1
+                  </div>
+                  <div class="gradex__list__title__items__item__text__dept">
+                    언론정보학과
+                  </div>
+                </div>
+                <div class="gradex__list__title__items__item__letter">
+                  <img
+                    src="image/envelope-solid.svg"
+                    class="gradex__list__title__items__item__letter__img"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> -->
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+    <script src="global.js" defer></script>
+
+    <script>
+      $(document).ready(function () {
+        $("#fullpage").fullpage({
+          anchors: ["page1", "page2", "page3"],
+          navigation: false,
+        });
+      });
+      if ("onhashchange" in window)
+        // does the browser support the hashchange event?
+        window.onhashchange = function () {
+          console.log(window.location.hash);
+        };
+    </script>
+  </body>
+</html>
